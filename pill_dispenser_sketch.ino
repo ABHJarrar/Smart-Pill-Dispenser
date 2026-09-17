@@ -22,10 +22,8 @@ float fractionalSteps = 0.0;
 
 const char* ssid = "SSID"; // You'll have to change this to the network name you'll be using to interface with the Arduino board.
 const char* password = "password"; //Same thing for the password.
-const char* server = "android-supportive-housing.onrender.com"; // VPS server address
-//const char* server = "165.232.143.201";   // VPS server address
-//int port = 3000;
-int port = 433
+const char* server = "165.232.143.201";   // VPS server address
+int port = 3000;
 String device_id = "pill_3";
 RTC_DS3231 rtc;
 LiquidCrystal_I2C lcd(0x27, 20, 4);
@@ -39,7 +37,7 @@ struct ScheduleData {
 
 };
 
-WiFiSSLClient wifi;
+WiFiClient wifi;
 
 const int EEPROM_COUNT_ADDR = 0;
 const int EEPROM_DATA_START = 1;
